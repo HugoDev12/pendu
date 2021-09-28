@@ -12,11 +12,11 @@ const WORDLIST = [
     "oreiller"
 ];
 
-const COMMANDS = [
-    ["j" , "jouer"],
-    ["r" , "règles"],
-    ["q" , "quitter"]
-];
+const COMMANDS = {
+    j : "jouer",
+    r : "règles",
+    q : "quitter"
+};
 
 
 //get a random word from WORDLIST
@@ -27,7 +27,7 @@ let guessWord = pickRandomWord.split("").map(x => "_");
 
 let userScore = 7;
 
-let gameInterface = null;
+let gameInterface;
 
 let toContinue = false;
 
@@ -56,11 +56,9 @@ let index = pickRandomWord.indexOf(userChoice);
 
 // first prompt before the game get started
 function interface(COMMANDS){
-
-gameInterface = prompt(`${COMMANDS[0][0]} : ${COMMANDS[0][1]} \n${COMMANDS[1][0]} : ${COMMANDS[1][1]} \n${COMMANDS[2][0]} : ${COMMANDS[2][1]}`);
+    gameInterface = prompt(`j : ${COMMANDS.j}\nr : ${COMMANDS.r}\nq : ${COMMANDS.q}`);
 
     return gameInterface;
-    
 };
 
 
@@ -68,8 +66,6 @@ gameInterface = prompt(`${COMMANDS[0][0]} : ${COMMANDS[0][1]} \n${COMMANDS[1][0]
 
 // first prompt box to list all commands
 interface(COMMANDS);
-
-
 
 // check user input according to gameInterface
 if (gameInterface === "j")
@@ -81,17 +77,17 @@ if (gameInterface === "j")
 }
 else if (gameInterface === "r")
 {
-    alert("règles");
+    alert("règles") + interface(COMMANDS);
 } 
 else if (gameInterface === "q")
 {
     alert("Aurevoir !");
 } else interface(COMMANDS);
 
-
-
 // if userscore = 0, display loose, if word is found, display win, condition is activate only if the user pressed j at gameInterface.
 if (toContinue)
 userScore === 0 ? alert (`Vous avez perdu, le mot était ${pickRandomWord}.`) : alert (`Vous avez gagné, vous avez trouvé le mot ${pickRandomWord}.`);
+
+
 
 

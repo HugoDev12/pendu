@@ -184,3 +184,71 @@
 //     let attempts = 7;
 //     let userLetter = prompt("choisissez une lettre");
 // }
+
+
+
+// if (gameInterface === "j")
+//     {
+//         main();
+//     }
+//     else if (gameInterface === "r")
+//     {
+//         alert("règles");
+//     } 
+//     else if (gameInterface === "q")
+//     {
+//         alert("Aurevoir !");
+//     } else interface(COMMANDS);
+
+
+//call main function in a loop
+// while ((userScore != 0) && (guessWord.includes("_"))){
+//     main();
+// }
+
+
+
+
+// const COMMANDS = {
+//     j : "jouer",
+//     r : "règles",
+//     q : "quitter"
+// };
+
+// function interface(COMMANDS){
+
+//     COMMANDS.j ? main() : alert("règles");
+    
+    
+//     // if (COMMANDS.j){
+//     //     main();
+//     // } else if (COMMANDS.r){
+//     //     let rules = alert("règles").
+//     // } else 
+
+// };
+
+// if (gameInterface === COMMANDS.j)
+//     {
+//         main();
+//     }
+//     else if (gameInterface === COMMANDS.r)
+//     {
+//         alert("règles");
+//     } 
+//     else if (gameInterface === COMMANDS.q)
+//     {
+//         alert("Aurevoir !");
+//     } else interface(COMMANDS);
+
+// for (let key in COMMANDS){
+//     key = COMMANDS.key;
+//     let gameInterface = prompt (COMMANDS.key);
+//     return gameInterface;
+// };
+
+// let listOfCommands = null;
+
+//     for (let key in COMMANDS){
+//         listOfCommands = COMMANDS[key];
+//     };
